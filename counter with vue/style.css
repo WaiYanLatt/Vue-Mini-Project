@@ -20,8 +20,10 @@ button{
     background-color: black;
     font-weight: bold;
     cursor: pointer;
+    margin: 10px;
 }
 p{
     font-size: 4rem;
     font-weight: 500;
+    margin-left: 10px;
 }

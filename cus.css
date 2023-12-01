@@ -21,6 +21,7 @@ body{
     padding: 10px;
     border-radius: 5px;
     box-shadow: #3b82f6 0px 25px 50px -12px;
+    margin: 10px;
 }
 a{
     text-decoration: none;
