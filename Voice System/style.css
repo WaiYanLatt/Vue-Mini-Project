@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1rem;
+}
+html , body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #020617;
+}
+textarea{
+   width: 400px; 
+   border-radius: 10px;
+   padding: 10px;
+   border: 1px solid #3b82f6;
+   font-weight: bold;
+   box-shadow: #3b82f6 0px 50px 100px -20px, #3b82f6 0px 30px 60px -30px;
+}
+textarea:focus{
+   outline-color: #3b82f6;
+}
+.card{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.btn{
+  width: 50px;
+  height: 50px;
+  background-color: #3b82f6;
+  position: absolute;
+  color: white;
+  border-radius: 10px;
+  border: 0;
+  bottom: 7px;
+  right: 7px;
+  cursor: pointer;
+}
+.cl{
+    width: 25px;
+    height: 25px;
+}
