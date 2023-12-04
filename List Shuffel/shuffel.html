@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List Shuffel</title>
+    <link rel="shortcut icon" href="/Vue.png" type="image/x-icon">
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div class="card">
+        <h1>Please Shuffel Your GirlFriends Who You Want To Date ToNight.</h1>
+        <ul>
+          <li v-for="value , index in myGirls" :key="value.id">
+            {{value.name}}
+            <p v-show="index === 0 && value.name === 'Vonssy'">
+              You Must Date with Vonssy Flecial ToNight 💕.
+              <img src="./img/vonzzy.jpg" alt=""/>
+            </p>
+            <p v-show="index === 0 && value.name === 'Lisa'">
+              You Must Date with Lalisa ToNight 💕.
+              <img src="./img/lisa.jpg" alt=""/>
+            </p>
+            <p v-show="index === 0 && value.name === 'Rose'">
+              You Must Date with Rosean Park ToNight 💕.
+              <img src="./img/Rose.jpg" alt=""/>
+            </p>
+            <p v-show="index === 0 && value.name === 'Jisso'">
+              You Must Date with Kim Jisso ToNight 💕.
+              <img src="./img/jisso.jpeg" alt=""/>
+            </p>
+            <p v-show="index === 0 && value.name === 'Sze'">
+              You Must Date with Sze ToNight 💕.
+              <img src="./img/sze.jpg" alt=""/>
+            </p>
+            <p v-show="index === 0 && value.name === 'Jinne'">
+              You Must Date with Jinne Kim ToNight 💕.
+              <img src="./img/jennie.jpg" alt=""/>
+            </p>
+          </li>
+          <button class="btn" @click="shuffle">Shuffle Your Girls</button>
+          <br /><br />
+          <i
+            >*Note : please shuffle 3 times when you reach third result is your
+            dating girl.</i
+          >
+        </ul>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
