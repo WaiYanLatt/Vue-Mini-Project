@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Servery Form</title>
+    <link rel="shortcut icon" href="/Vue.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <div>
+        <form>
+          <h1>{{getQuestion.question}}</h1>
+          <input
+            type="text"
+            v-model="getQuestion.answer"
+            placeholder="Please Answer Here"
+            required
+          />
+          <p  :class="{'color' : active === true}">{{content}}</p>
+          <p :class="{'color1' : active1 === true}">{{content1}}</p>
+          <p :class="{'color1' : active2 === true}">{{content3}}</p>
+        </form>
+        <div class="flex">
+          <button @click="previous">Previous</button>
+          <button @click="next">Next</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
