@@ -17,10 +17,10 @@ body {
   width: 500px;
   height: 300px;
   object-fit: cover;
-  animation: mar 1s;
   border: 0;
   border-radius: 10px;
   box-shadow: #38bdf8 0px 48px 100px 0px;
+  animation: mar 1s;
 }
 @keyframes mar {
     0%{

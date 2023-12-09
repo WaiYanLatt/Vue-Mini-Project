@@ -38,6 +38,7 @@ const app = createApp({
         return;
       } else {
         this.imgIndex++;
+        this.slide.active = true;
       }
     },
     previous() {
