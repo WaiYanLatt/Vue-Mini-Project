@@ -1,0 +1,93 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+}
+.bg{
+    width: 100%;
+    height: 100%;
+    background-image: url(./bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+form {
+  width: 1000px;
+  height: 500px;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.input {
+  font-weight: bold;
+  display: block;
+  width: 400px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2.5px solid #4bc9f1;
+}
+.input:focus{
+    outline: none;
+}
+img{
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+}
+.mar{
+    margin-left: 35px;
+}
+.error {
+    color: #dc2626;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.success {
+    color: #22c55e;
+    padding-left: 10px;
+    font-weight: bold;
+    font-size: 15px;
+}
+.flex1{
+    display: flex;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.term {
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 15px;
+}
+.Btn {
+    background-color: #4bc9f1;
+    color: white;
+    width: 95%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 0;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.Btn:active {
+    background-color: black;
+}
+.mt{
+    margin-top: 20px;
+}

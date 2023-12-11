@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Valid</title>
+    <link rel="shortcut icon" href="/Vue.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg">
+    <div id="app">
+      <div class="flex">
+        <div>
+          <form @submit="submitForm">
+            <img src="./bg1.jpg" alt="" />
+            <div class="mar">
+              <input
+                type="text"
+                class="input"
+                v-model="name"
+                placeholder="Please Enter Your Name"
+              />
+              <p v-if="this.error1" class="error">{{error1Message}}</p>
+              <p v-else="this.success1" class="success">{{success1Message}}</p>
+              <input
+                type="email"
+                class="input"
+                v-model="email"
+                placeholder="Please Enter Your Email"
+              />
+              <p v-if="this.error2" class="error">{{error2Message}}</p>
+              <p v-else="this.success2" class="success">{{success2Message}}</p>
+              <input
+                type="password"
+                class="input"
+                v-model="password"
+                autocomplete="off"
+                placeholder="Please Enter Your Password"
+              />
+              <p v-if="this.error === true" class="error">{{errorMessage}}</p>
+              <p v-else="this.success === true" class="success">
+                {{successMessage}}
+              </p>
+              <div class="flex1">
+                <input type="checkbox" v-model="check" />
+                <p class="term">
+                  I Agree To The Privacy Policy And Terms Of Your Service.
+                </p>
+              </div>
+              <p class="error mt">{{checkMessage}}</p>
+              <p class="success mt">{{formComplete}}</p>
+              <button class="Btn">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./script.js"></script>
+  </body>
+</html>
