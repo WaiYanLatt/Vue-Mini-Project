@@ -25,6 +25,12 @@ const app = createApp({
   watch: {
     password: {
       handler(newValue, oldValue) {
+
+        if(newValue.length === 0){
+          this.error = true;
+          return;
+        }
+
         if (newValue.length < 8) {
           this.errorMessage = "Your Password At Least 8 Character Long.";
           this.error = true;
