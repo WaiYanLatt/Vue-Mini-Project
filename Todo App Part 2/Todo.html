@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="shortcut icon" href="/Vue.png" type="image/x-icon" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+
+    <div id="app">
+      <form action="#" @submit.prevent="addTodo">
+        <input
+          type="text"
+          placeholder="What needs to be done?"
+          v-model="todoTitle"
+        />
+      </form>
+      <ul class="todo-list">
+        <li
+          class="todo-item"
+          v-if="filteredTodos.length > 0"
+          v-for="todo in filteredTodos"
+          :key="todo.id"
+        >
+          <input type="checkbox" v-model="todo.completed" />
+          <span class="todo-title" :class="{ completed: todo.completed }"
+            >{{ todo.title }}</span
+          >
+          <span class="todo-remove" @click="deleteTodo(todo.id)">
+            &times;
+          </span>
+        </li>
+        <li v-else class="todo-item">No todos found</li>
+        <div class="actions">
+          <p>{{ totalTodos }} todos</p>
+          <div class="filter">
+            <button
+              @click="setFilterStatus('all')"
+              :class="{ selected: filterStatus === 'all' }"
+            >
+              All
+            </button>
+            <button
+              @click="setFilterStatus('active')"
+              :class="{ selected: filterStatus === 'active' }"
+            >
+              Active
+            </button>
+            <button
+              @click="setFilterStatus('completed')"
+              :class="{ selected: filterStatus === 'completed' }"
+            >
+              Completed
+            </button>
+          </div>
+      </ul>
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
